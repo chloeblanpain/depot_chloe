@@ -1,0 +1,115 @@
+---
+title: "mini_rapport_test"
+author: "Chloé Blanpain"
+date: "2025-02-04"
+output: pdf_document
+
+bibliography: biblio/diamants.bib 
+csl: biblio/isara-iso-690.csl
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warnings = FALSE)
+library(knitr)
+library(ggplot2)
+```
+
+# Introduction
+
+Le diamant est un minéral d’une grande pureté, constitué presque exclusivement d’atomes de carbone. Sa formule chimique, notée C, révèle une concentration en carbone variant entre 99,95 % et 99,99 % [@valuae_ou_2015], faisant de cette gemme l’une des plus pures connues sur Terre. 
+
+Cependant, la présence d’éléments traces tels que l’azote, le bore ou l’hydrogène peut influencer ses caractéristiques, notamment sa couleur [@valuae_ou_2015]. Ces variations chimiques confèrent à chaque diamant une identité unique.
+
+## Le prix du diamant
+
+un diamant de 1 carat pourrait coûter entre 2 000 et 25 000 euros. Cela signifie mathématiquement que le prix d'un diamant de milieu de gamme devrait coûter entre 11 000 et 12 000 euros. Cela semble simple mais pas si évident dans la mesure où l'on ne doit pas réfléchir dans ce sens.
+Un diamant de 1 carat de bonne qualité et de bonne valeur devrait vous coûter entre 4 500 et 7 000 euros. [@celinni_prix_2024]
+
+# L'Objectif 
+
+Notre objectif est de voir comment se comporte le prix des diamants en fonction de ses caractéristiques (couleur, poids, ...) . 
+
+
+# Les données
+
+
+Les données proviennent de R. NOus les importons grâce à la fonction suivante : 
+```{imports , echo=TRUE, eval=TRUE}
+data(diamonds) 
+
+```
+
+## visualisation du jeu de données
+```{visualisation , echo=TRUE, eval=TRUE}
+
+head(diamonds) #premier apperçu 
+
+```
+
+Il s'agit d'un jeu de données qui repertorie `r ` diamants selon ces catégories : `r names(diamonds)`. Nous allons surtout nous intérésser au poids, à la couleur et à la qualité de la coupe de ces diamants.
+
+
+### visualisation statistiques 
+```{r vuestat, echo=TRUE, eval=TRUE}
+summary(diamonds) # Résumé statistique des variables 
+```
+
+Nous remarquons que les diamants listés sont majoritairement des diamants avec un poids faible (moyenne autour de 0,8 carat). Le diamant le plus léger est à 0,2 carat et le plus lourd à 5 carat. Nous avons des grandes disparités entre les diamants. 
+Pareil pour les prix. Nous avons des prix variants de 326 à 18 823 euros (grand écart entre les prix) avec une moyenne autour de 4000 euros. 
+
+
+
+# Analyse et Observation 
+
+## Distribution du prix des diamants 
+
+Nous allons observer la répartition des prix de ces diamants. 
+Cette distribution suit une loi normale. La majorité de nos diamants se retrouvent dans des prix bas. A l'inverse, peu de diamants ont un prix élevé. 
+
+```{r distributionprix, echo=TRUE,eval=TRUE, fig.cap="Fig 1 : Distribution du prix des diamants"}
+
+ggplot(diamonds, aes(x = price)) +
+  geom_histogram(binwidth = 500, fill = "steelblue", color = "lightpink", alpha = 0.5) +
+  labs(title = "Distribution du prix des diamants", x = "prix", y = "nombre de diamants") +
+  theme_void()
+  
+```
+
+## Relation entre le prix et le poids 
+
+```{r prixetpoids, echo=TRUE,eval=TRUE, fig.cap="Fig 2 : Répartion du prix en fonction du poids des diamants"}
+ggplot(data=diamonds, mapping= aes(x=price, y= carat, color = color))+  
+  geom_point(alpha=0.5, size=5)+
+  scale_color_brewer(palette = "Set1")+
+  geom_smooth( method=lm , color = "yellow") +
+  theme_dark()+
+  labs(title = "Prix des diamants en fonction du poids (carat)",
+       x="Prix (en Euro)", y="Poid (en carat)")
+```
+
+Nous remarquons une corrélation entre le prix et le poids des diamants. En effet, il y a une tendance : plus un diamant est lourd plus son prix tend à être élevé. 
+
+## Relation entre le prix et la couleur
+
+```{r prixetcouleur, echo=TRUE,eval=TRUE, fig.cap="Fig 3 : Répartition du prix en fonction de la couleur des diamants"}
+
+ggplot(diamonds, aes(x = price, fill = color)) +
+  geom_histogram(binwidth = 250, alpha = 0.7, position = "identity", color = "pink") +
+  facet_wrap(~ color) +
+  labs(title = "Prix des diamants en fonction de la couleur", x = "prix", y = "nombre de diamants") +
+  theme_minimal()
+
+```
+
+Ce graphique nous montre que la couleur n'est pas un facteur déterminent mais qu'il a une influence sur le prix du diamant. 
+
+# Conclusion 
+
+Comme nous l'avons nu avec nos références bibliographiques, la pureté du diamant dépend de son poids. Cependant, c'est cette pureté qui influence le prix : plus un diamant est pur, plus il est lourd, plus il est cher. 
+
+# Références
+
+
+## Bibliographie
+
+Liste des publications :
