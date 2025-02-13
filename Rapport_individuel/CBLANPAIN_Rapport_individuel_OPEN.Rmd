@@ -1,0 +1,110 @@
+---
+title: "OPEN - Rapport : L'impact de la crise de la COVID-19 sur la transition numérique"
+author: "Chloé Blanpain - élève ingénieure en 4e année à l'ISARA"
+date: "2025-02-10"
+output: pdf_document
+
+bibliography: biblio/rapport_OPEN.bib 
+csl: biblio/isara-iso-690.csl
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warnings = FALSE)
+```
+
+# Introduction
+
+La pandémie de la COVID-19 a bouleversé l’organisation du travail, la productivité et l’innovation en France [@lallement_impact_2023]. Face à cette crise, les entreprises ont dû s’adapter malgré elles. La transformation numérique, déjà présente, s’est complètement accélérée pour répondre aux problèmes créés par la crise sanitaire.
+
+En 2020, 80 % des entreprises ont investi dans le digital [@lallement_impact_2023], ne voyant plus le numérique comme un coût, mais comme un investissement stratégique. Cette accélération s’est traduite par une adoption massive de nouveaux outils et pratiques qui ont totalement remodelé durablement le monde de l’entreprise.
+
+
+# Accélération de la digitalisation des entreprises
+
+La crise sanitaire a contraint les entreprises à adopter rapidement des outils numériques pour garantir la continuité de leurs activités lors de la pandémie. Le recours massif au télétravail, aux plateformes digitales, aux assemblées générales à distance a profondément transformé le fonctionnement des organisations. Ce passage forcé au numérique a engendré une mutation profonde de l’économie, obligeant les entreprises à revoir leurs stratégies et leurs modèles d’organisation afin de continuer à fonctionner. [@deschanel_crise_2021].
+
+Le baromètre Stormshield 2020 indique que **70 % des décideurs** estiment que leur organisation a progressé en matière de transformation numérique [@abensur_limpact_2021]. Cette accélération, bien que directement influencée par la crise sanitaire, a également révélé des disparités : certaines entreprises étaient déjà bien équipées avant mars 2020 et ont su s’adapter plus aisément, tandis que d’autres ont dû initier leur transition dans l’urgence [@abensur_limpact_2021]. Par ailleurs, **61 % des décideurs** reconnaissent que la crise a changé leur perception de l’importance du numérique [@abensur_limpact_2021], soulignant ainsi un changement structurel dans la gestion des entreprises.
+
+## Transformation du Travail 
+
+L’adoption du télétravail a été l’une des évolutions majeures imposées par la crise sanitaire. Avant la pandémie, seuls 3 % des travailleurs français pratiquaient le télétravail, un chiffre qui a bondi à 30 % pendant le confinement [@lallement_impact_2023]. Cette solution a permis à de nombreuses entreprises de continuer leurs activités, et ce, même à distance.
+
+
+Ce passage au travail à distance a nécessité un investissement et une adaptation des outils numériques :
+
+- **Outils bureautiques et collaboratifs** : généralisation des logiciels de visioconférence (Zoom, Microsoft Teams), adoption des plateformes de gestion de projet (Trello, Asana) et mise en place de signatures électroniques.
+
+- **Services de communications** : intégration d’outils de collaboration en temps réel pour fluidifier les échanges entre employés et renforcer la cohésion à distance [@abensur_limpact_2021].
+
+
+Le télétravail a également eu un impact positif sur l’environnement en réduisant les déplacements et, par extension, les émissions de CO2 [@deschanel_crise_2021]. Il a pareillement engendré un changement dans les espaces de travail. La diminution du besoin en bureaux physiques et la mise en place du coworking ont permis de favoriser, eux aussi, la flexibilité et l’innovation.
+
+Cependant, le télétravail a aussi engendré des défis majeurs, notamment en mettant en valeur l’importance de l’équilibre des employés entre leur vie personnelle et professionnelle. Beaucoup ont eu des difficultés à déconnecter après le travail, augmentant les risques de burn-out [@lallement_impact_2023]. Ce droit à la déconnexion a d’ailleurs révélé la nécessité d’un encadrement juridique afin de protéger les salariés [@deschanel_crise_2021].
+
+## Digitalisation des processus
+
+Face aux contraintes sanitaires, de nombreux processus liés aux entreprises ont dû être dématérialisés. Ce fut notamment le cas avec l’accélération de la dématérialisation des formalités administratives.
+
+Les démarches, par exemple l’inscription au RCS ou encore le dépôt de documents en ligne, se sont vu automatisées pour faciliter la vie au sein de l’entreprise. Les instances décisionnelles ont dû, elles aussi, s’adapter. Les assemblées générales se réalisent à distance avec un système de votes électroniques pour garantir la continuité des prises de décision. L’utilisation croissante de modèles prédictifs comme l’intelligence artificielle et les algorithmes prédictifs permet de mieux appréhender le futur. Ces outils permettent aux entreprises d’avoir des pistes de réflexion, de détecter les difficultés financières et d’anticiper les risques de faillite [@deschanel_crise_2021].
+
+Les petites entreprises ont particulièrement dû adapter leurs modèles économiques en digitalisant leurs processus pour assurer leur pérennité [@shaikh_six_2022].
+
+## Impact sur la productivité
+
+La crise de la COVID-19 a énormément impacté la productivité des entreprises. De grandes inégalités s’observent entre les secteurs. Les travailleurs précaires et les secteurs non essentiels ou impliquant des interactions physiques (tourisme, événementiel) ont été plus touchés par les fermetures et les pertes d’emploi. L’arrêt créé par la pandémie a aussi engendré des problèmes sur la chaîne d’approvisionnement. La dépendance aux importations et les ralentissements logistiques ont freiné la reprise économique et la production des entreprises. Cependant, dans les secteurs compatibles avec la digitalisation de leurs processus et le travail à distance, ont pu observer une augmentation de leur productivité [@lallement_impact_2023].
+
+La crise sanitaire a clairement impacté la productivité des entreprises. Néanmoins, la digitalisation accélérée d’une partie d’entre elles a permis de limiter, voire d’éviter cette baisse de productivité.
+
+
+# Evolution des habitudes de consommation
+
+La pandémie a très rapidement entrainé une modification des habitudes des consommateurs. Elle a notamment entrainé une transition inévitable vers les achats et les payements en ligne. 
+
+## Adoption des payements numériques
+
+Afin de survivre économiquement, les entreprises ont été obligées de digitaliser les paiements dans le but de maintenir leur activité, malgré les fermetures physiques. Il a fallu aussi répondre aux restrictions sanitaires, en trouvant une solution qui minimisait les contacts physiques. Le gouvernement français a aussi apporté son soutien avec des incitations financières pour favoriser la digitalisation des transactions [@shaikh_six_2022].
+
+Il y a eu une augmentation d’au moins 47 % du passage aux paiements numériques après les premières interventions gouvernementales et 80 % des entreprises ont adopté les paiements numériques en moins d’une semaine [@shaikh_six_2022]. Cependant, ce taux d’adoption varie selon les régions et les secteurs d’activité. Par exemple, les secteurs nécessitant une forte interaction humaine ont un taux d’adoption plus faible [@shaikh_six_2022].
+
+
+# Sécurité et enjeux numériques
+
+## Les enjeux numériques au cœur de l’innovation
+
+L’essor du numérique a favorisé des avancées majeures dans divers domaines. Les **technologies de l’information** ont connu une transformation notable grâce à la création d’outils plus performants afin de faciliter le travail collaboratif et l’automatisation des tâches. Cela a permis une amélioration de l’efficacité de nombreuses opérations [@lallement_impact_2023]. Parallèlement, la **blockchain** émerge comme une technologie clée. Son utilisation croissante permet de garantir la sécurisation des transactions et la gestion des données sensibles. La confiance dans les échanges numériques se renforce [@deschanel_crise_2021]. Cependant, il est important de souligner que la crise a également contraint certaines entreprises à réduire leurs budgets de recherche et développement, limitant ainsi leur capacité à innover et à tirer pleinement parti de ces avancées technologiques [@lallement_impact_2023].
+
+## La cybersécurité, un enjeu majeur
+
+L’augmentation du télétravail et la digitalisation des processus ont amplifié les risques de cyberattaques, entraînant des conséquences significatives pour la sécurité des systèmes d'information.
+
+Tout d'abord, nous avons constaté une **explosion des cyberattaques** entre 2019 et 2020, soulignant la vulnérabilité des infrastructures numériques et donc des entreprises. Le **phishing** est lui devenu plus sophistiqué, avec des campagnes exploitant les craintes liées à la COVID-19 pour tromper les utilisateurs, rendant la vigilance essentielle [@abensur_limpact_2021].
+
+Face à ces menaces croissantes, les défis en matière de cybersécurité deviennent des préoccupations majeures au sein des entreprises. Il est nécessaire de sécuriser les accès à distance pour protéger correctement les salariés en télétravail et les données échangées.  Des campagnes de sensibilisation et des formations à la cybersécurité sont instaurées. 68 % des entreprises ont renforcé la formation à la cybersécurité afin de mieux préparer leurs équipes face à ces dangers [@abensur_limpact_2021]. Des **investissements massifs** sont aussi réalisés (adoption du modèle Zero Trust, mise en place de VPN, chiffrement avancé des fichiers…) permettant ainsi de protéger correctement leurs données [@abensur_limpact_2021].
+
+
+# Conclusion 
+
+La crise sanitaire a accéléré la digitalisation des entreprises, marquant un tournant significatif dans leur fonctionnement. Bien que des défis persistent, les changements amorcés s’inscrivent dans une dynamique durable. 
+
+Pour garantir une transition numérique pérenne, l’adaptation des politiques du travail et la modernisation des entreprises seront essentielles. Il est nécessaire de trouver un équilibre entre flexibilité, innovation et cybersécurité pour garantir la résilience face aux menaces numériques tout en garantissant une bonne productivité.
+Bien que des obstacles subsistent, l'engagement vers une transformation numérique réfléchie est aujourd’hui un des grands enjeux du digital.
+
+
+# Ce que je ressors de ce sujet 
+
+Étudier l’impact de la crise sanitaire sur la transition numérique a été très intéressant. J’ai pu mieux comprendre comment réellement la COVID-19 a impacté les entreprises françaises, de mieux appréhender les enjeux actuels du numérique et l’importance du digital. 
+
+Je me suis rendu compte que face à un imprévu, il faut s’adapter. Je trouve que le cas de la pandémie est une belle illustration de la résilience des entreprises. Elles ont su trouver des solutions et s’adapter du mieux qu’elles pouvaient. Et l’une de ces solutions a été de se tourner vers le numérique.
+
+Les outils numériques sont une vraie opportunité pour l’avenir. Le télétravail et l’amélioration des logiciels permettant le travail à distance ont apporté beaucoup aux conforts des employés. Aujourd’hui, beaucoup d’entreprises autorisent leurs employés au télétravail, et ce, sans motif de crise sanitaire. Cela permet aux employés une certaine flexibilité et un confort non négligeable : pas besoin de prendre les transports, gestion de ses horaires… Étant nous-mêmes à distance pour ce module, je prends d’autant plus conscience. Sans la crise sanitaire, les opportunités de télétravail auraient été plus rares et compliquées à mettre en place. Cela amène un autre point, l’importance de l’équilibre entre sa vie professionnelle et personnelle et la santé mentale. Le télétravail a vraiment mis en lumière l’importance d’avoir une séparation entre les deux et l’importance du bien-être de ces employés.
+
+Comme énoncé dans mon rapport, les cyberattaques ont énormément augmenté pendant la crise et on ne cesse d’entendre des cas de cyberattaques chez des géants du numérique. L’ISARA a aussi été touché lors de l’incident de Microsoft. La pandémie a permis de prendre conscience de ce problème. La protection de nos données et des données des entreprises est un enjeu essentiel et majeur. Même si des solutions sont proposées (double authentification …), cela reste toujours un problème présent.
+
+Le digital est un enjeu majeur et ne cesse d’évoluer. Il s’agit d’une réelle opportunité pour les entreprises de s’améliorer continuellement. En tant que future ingénieure, j’espère pouvoir, moi aussi, appréhender les défis et les enjeux liés aux numériques dans mon futur métier.
+
+
+
+# Références
+
+
+## Bibliographie
